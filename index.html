@@ -65,12 +65,12 @@
     <button id="rain-sound-button" class="button">🌧️ Tostado Medio</button>
 
     <!-- Audios para los sonidos -->
-    <audio id="fire-sound">
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <audio id="fire-sound" loop>
+      <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_5662eb6f1f.mp3" type="audio/mpeg">
       Tu navegador no soporta audio.
     </audio>
-    <audio id="rain-sound">
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+    <audio id="rain-sound" loop>
+      <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_51d1c1e0a1.mp3" type="audio/mpeg">
       Tu navegador no soporta audio.
     </audio>
   </section>
@@ -92,21 +92,37 @@
   </footer>
 
   <script>
-    const fireSound = document.getElementById('fire-sound');
-    const rainSound = document.getElementById('rain-sound');
-    const fireButton = document.getElementById('fire-sound-button');
-    const rainButton = document.getElementById('rain-sound-button');
+    document.addEventListener('DOMContentLoaded', () => {
+      const fireSound = document.getElementById('fire-sound');
+      const rainSound = document.getElementById('rain-sound');
+      const fireButton = document.getElementById('fire-sound-button');
+      const rainButton = document.getElementById('rain-sound-button');
 
-    fireButton.addEventListener('click', () => {
-      rainSound.pause();
-      rainSound.currentTime = 0;
-      fireSound.play();
-    });
+      fireButton.addEventListener('click', () => {
+        if (!fireSound.paused) {
+          fireSound.pause();
+          fireSound.currentTime = 0;
+          fireButton.textContent = '🔥 Tostado Alto';
+        } else {
+          rainSound.pause();
+          rainSound.currentTime = 0;
+          fireSound.play();
+          fireButton.textContent = '🔇 Detener Tostado Alto';
+        }
+      });
 
-    rainButton.addEventListener('click', () => {
-      fireSound.pause();
-      fireSound.currentTime = 0;
-      rainSound.play();
+      rainButton.addEventListener('click', () => {
+        if (!rainSound.paused) {
+          rainSound.pause();
+          rainSound.currentTime = 0;
+          rainButton.textContent = '🌧️ Tostado Medio';
+        } else {
+          fireSound.pause();
+          fireSound.currentTime = 0;
+          rainSound.play();
+          rainButton.textContent = '🔇 Detener Tostado Medio';
+        }
+      });
     });
   </script>
 </body>
