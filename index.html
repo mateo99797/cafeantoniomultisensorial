@@ -37,6 +37,7 @@
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s;
+      cursor: pointer;
     }
     .button:hover {
       background-color: #b85717;
@@ -58,7 +59,15 @@
   <section class="hero">
     <h2>Descubre el arte del café</h2>
     <p>Sumérgete en una experiencia de aromas, sabores y texturas que despiertan todos tus sentidos.</p>
-    <a href="#contacto" class="button">Quiero saber más</a>
+
+    <!-- Botón para controlar el sonido -->
+    <button id="sound-toggle" class="button">🔊 Activar sonido</button>
+
+    <!-- Audio oculto que se controla con el botón -->
+    <audio id="background-audio" loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
   </section>
 
   <section>
@@ -84,5 +93,22 @@
   <footer>
     <p>&copy; 2025 Café Antonio. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    const audio = document.getElementById('background-audio');
+    const button = document.getElementById('sound-toggle');
+    let isPlaying = false;
+
+    button.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        button.textContent = '🔊 Activar sonido';
+      } else {
+        audio.play();
+        button.textContent = '🔇 Detener sonido';
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
 </body>
 </html>
