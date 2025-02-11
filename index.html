@@ -31,7 +31,7 @@
     .button {
       display: inline-block;
       padding: 15px 30px;
-      margin-top: 20px;
+      margin: 10px;
       background-color: #d2691e;
       color: white;
       text-decoration: none;
@@ -60,28 +60,25 @@
     <h2>Descubre el arte del café</h2>
     <p>Sumérgete en una experiencia de aromas, sabores y texturas que despiertan todos tus sentidos.</p>
 
-    <!-- Botón para controlar el sonido -->
-    <button id="sound-toggle" class="button">🔊 Activar sonido</button>
+    <!-- Botones para reproducir diferentes sonidos -->
+    <button id="fire-sound-button" class="button">🔥 Tostado Alto</button>
+    <button id="rain-sound-button" class="button">🌧️ Tostado Medio</button>
 
-    <!-- Audio oculto que se controla con el botón -->
-    <audio id="background-audio" loop>
+    <!-- Audios para los sonidos -->
+    <audio id="fire-sound">
       <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    <audio id="rain-sound">
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
       Tu navegador no soporta audio.
     </audio>
   </section>
 
   <section>
-    <h2>¿Qué es una experiencia multisensorial?</h2>
-    <p>En Café Antonio, cada taza cuenta una historia. Nuestro café está cuidadosamente seleccionado y tostado para ofrecerte una experiencia que va más allá del sabor. Siente los aromas, percibe las texturas y déjate llevar por una sinfonía de sensaciones únicas.</p>
-  </section>
-
-  <section>
-    <h2>Nuestros procesos</h2>
-    <ul>
-      <li><strong>Selección de granos:</strong> Solo los mejores granos de café de especialidad.</li>
-      <li><strong>Tostado artesanal:</strong> Resaltando el perfil de cada origen.</li>
-      <li><strong>Cata sensorial:</strong> Cada lote es evaluado para garantizar la mejor experiencia.</li>
-    </ul>
+    <h2>Descripción de Tostados</h2>
+    <p><strong>Tostado Alto:</strong> Un perfil intenso con notas ahumadas, ideal para los amantes de sabores fuertes.</p>
+    <p><strong>Tostado Medio:</strong> Balance perfecto entre acidez y dulzura, resaltando las características del origen del café.</p>
   </section>
 
   <section id="contacto">
@@ -95,19 +92,21 @@
   </footer>
 
   <script>
-    const audio = document.getElementById('background-audio');
-    const button = document.getElementById('sound-toggle');
-    let isPlaying = false;
+    const fireSound = document.getElementById('fire-sound');
+    const rainSound = document.getElementById('rain-sound');
+    const fireButton = document.getElementById('fire-sound-button');
+    const rainButton = document.getElementById('rain-sound-button');
 
-    button.addEventListener('click', () => {
-      if (isPlaying) {
-        audio.pause();
-        button.textContent = '🔊 Activar sonido';
-      } else {
-        audio.play();
-        button.textContent = '🔇 Detener sonido';
-      }
-      isPlaying = !isPlaying;
+    fireButton.addEventListener('click', () => {
+      rainSound.pause();
+      rainSound.currentTime = 0;
+      fireSound.play();
+    });
+
+    rainButton.addEventListener('click', () => {
+      fireSound.pause();
+      fireSound.currentTime = 0;
+      rainSound.play();
     });
   </script>
 </body>
