@@ -10,14 +10,19 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f1ea;
-      color: #333;
+      background-color: #f5e6ca;
+      color: #3b3b3b;
     }
     header {
-      background-color: #4a2c2a;
-      color: white;
+      background-color: #d4b484;
+      color: #3b3b3b;
       padding: 20px;
       text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto 10px;
     }
     section {
       padding: 20px;
@@ -25,33 +30,53 @@
     .hero {
       text-align: center;
       padding: 50px 20px;
-      background: url('https://images.unsplash.com/photo-1517686469429-8bdb87a439d6') no-repeat center center/cover;
-      color: white;
+      background-color: #f2dac3;
+      color: #3b3b3b;
     }
     .button {
       display: inline-block;
       padding: 15px 30px;
       margin: 10px;
-      background-color: #d2691e;
+      background-color: #5a9bd6;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      border-radius: 10px;
+      transition: transform 0.3s, background-color 0.3s;
       cursor: pointer;
     }
     .button:hover {
-      background-color: #b85717;
+      background-color: #4682b4;
+      transform: scale(1.05);
+    }
+    .story, .multisensorial {
+      font-family: 'Georgia', serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background-color: #faf3e0;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .interaction {
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+      background-color: #e8f5e9;
+      border-radius: 10px;
+      margin-top: 20px;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #333;
+      background-color: #3b3b3b;
       color: white;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="/mnt/data/Green Modern Minimal Coffee Shop Logo.png" alt="Café Antonio Logo">
     <h1>Café Antonio</h1>
     <p>Una experiencia multisensorial única</p>
   </header>
@@ -63,28 +88,24 @@
     <!-- Botones para reproducir diferentes sonidos -->
     <button id="fire-sound-button" class="button">🔥 Tostado Alto</button>
     <button id="rain-sound-button" class="button">🌧️ Tostado Medio</button>
-
-    <!-- Audios para los sonidos -->
-    <audio id="fire-sound" loop>
-      <source src="https://www.soundjay.com/nature/sounds/fire-2.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-    <audio id="rain-sound" loop>
-      <source src="https://www.soundjay.com/nature/rain-01.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
   </section>
 
-  <section>
-    <h2>Descripción de Tostados</h2>
-    <p><strong>Tostado Alto:</strong> Un perfil intenso con notas ahumadas, ideal para los amantes de sabores fuertes.</p>
-    <p><strong>Tostado Medio:</strong> Balance perfecto entre acidez y dulzura, resaltando las características del origen del café.</p>
+  <section class="multisensorial">
+    <h2>¿Por qué es una experiencia multisensorial?</h2>
+    <p>Nuestros audios fueron grabados directamente en la finca donde proviene nuestro café. Cada tostado está acompañado de una sensación única: el <strong>Tostado Alto</strong> evoca el crujir de la leña en el fuego, mientras que el <strong>Tostado Medio</strong> te transporta al suave murmullo de la lluvia sobre las hojas de café.</p>
+    <p>Para vivir la experiencia completa, presiona el botón correspondiente al tipo de tostado y déjate llevar por los sonidos auténticos de nuestra finca.</p>
   </section>
 
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Interesado en llevar la experiencia multisensorial de Café Antonio a tu mesa? Escríbenos y te contaremos más.</p>
-    <a href="mailto:info@cafeantonio.com" class="button">Escríbenos</a>
+  <section class="story">
+    <h2>Nuestra Historia</h2>
+    <p>Café Antonio nació en el año 2017 en una pequeña finca en Chaltura, donde comenzamos tostando nuestro propio café en tiesto y a leña. En esos días, el aroma del café recién tostado se mezclaba con la brisa fresca de la montaña, creando una experiencia única. Con pasión y dedicación, perfeccionamos el arte del tostado artesanal para ofrecer un café de calidad gourmet, reconocido por su sabor inigualable.</p>
+    <p>Nuestro café es el resultado de un proceso meticuloso y respetuoso con la tradición, combinado con técnicas innovadoras que resaltan las mejores cualidades de cada grano. Desde el primer sorbo, te transportarás a nuestras raíces, sintiendo el amor y la historia en cada taza.</p>
+  </section>
+
+  <section id="interaction" class="interaction">
+    <h2>¿Qué tipo de tostado prefieres?</h2>
+    <p>Responde en nuestro WhatsApp y te recomendaremos el café ideal para ti.</p>
+    <a href="https://wa.me/593990888888" target="_blank" class="button">💬 Comprar Café</a>
   </section>
 
   <footer>
