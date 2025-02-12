@@ -15,14 +15,9 @@
     }
     header {
       background-color: #d4b484;
-      color: #3b3b3b;
+      color: #00aaff;
       padding: 20px;
       text-align: center;
-    }
-    header img {
-      max-width: 180px;
-      display: block;
-      margin: 0 auto 10px;
     }
     section {
       padding: 20px;
@@ -30,7 +25,7 @@
     .hero {
       text-align: center;
       padding: 50px 20px;
-      background-color: #f2dac3;
+      background-color: white;
       color: #3b3b3b;
     }
     .button {
@@ -48,64 +43,57 @@
       background-color: #4682b4;
       transform: scale(1.05);
     }
-    .story, .multisensorial {
-      font-family: 'Georgia', serif;
-      font-size: 18px;
-      line-height: 1.6;
-      background-color: #faf3e0;
-      padding: 20px;
+    .step {
+      background-color: #fff;
+      padding: 30px;
       border-radius: 10px;
       margin: 20px 0;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .interaction {
-      text-align: center;
-      padding: 20px;
-      font-size: 20px;
-      background-color: #e8f5e9;
-      border-radius: 10px;
-      margin-top: 20px;
+    .step h2 {
+      font-size: 22px;
+      color: #5d4037;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #3b3b3b;
+      background-color: #3e2723;
       color: white;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="/mnt/data/Green Modern Minimal Coffee Shop Logo.png" alt="Café Antonio Logo">
     <h1>Café Antonio</h1>
     <p>Una experiencia multisensorial única</p>
   </header>
 
   <section class="hero">
-    <h2>Descubre el arte del café</h2>
-    <p>Sumérgete en una experiencia de aromas, sabores y texturas que despiertan todos tus sentidos.</p>
-
-    <!-- Botones para reproducir diferentes sonidos -->
-    <button id="fire-sound-button" class="button">🔥 Tostado Alto</button>
-    <button id="rain-sound-button" class="button">🌧️ Tostado Medio</button>
-  </section>
-
-  <section class="multisensorial">
-    <h2>¿Por qué es una experiencia multisensorial?</h2>
-    <p>Nuestros audios fueron grabados directamente en la finca donde proviene nuestro café. Cada tostado está acompañado de una sensación única: el <strong>Tostado Alto</strong> evoca el crujir de la leña en el fuego, mientras que el <strong>Tostado Medio</strong> te transporta al suave murmullo de la lluvia sobre las hojas de café.</p>
-    <p>Para vivir la experiencia completa, presiona el botón correspondiente al tipo de tostado y déjate llevar por los sonidos auténticos de nuestra finca.</p>
-  </section>
-
-  <section class="story">
     <h2>Nuestra Historia</h2>
-    <p>Café Antonio nació en el año 2017 en una pequeña finca en Chaltura, donde comenzamos tostando nuestro propio café en tiesto y a leña. En esos días, el aroma del café recién tostado se mezclaba con la brisa fresca de la montaña, creando una experiencia única. Con pasión y dedicación, perfeccionamos el arte del tostado artesanal para ofrecer un café de calidad gourmet, reconocido por su sabor inigualable.</p>
-    <p>Nuestro café es el resultado de un proceso meticuloso y respetuoso con la tradición, combinado con técnicas innovadoras que resaltan las mejores cualidades de cada grano. Desde el primer sorbo, te transportarás a nuestras raíces, sintiendo el amor y la historia en cada taza.</p>
+    <p>Café Antonio nació en el año 2017 en una pequeña finca en Chaltura, donde comenzamos tostando nuestro propio café en tiesto y a leña. Con el tiempo, perfeccionamos nuestro arte, creando un café gourmet reconocido por su sabor único, respetando la tradición mientras abrazamos la innovación.</p>
   </section>
 
-  <section id="interaction" class="interaction">
-    <h2>¿Qué tipo de tostado prefieres?</h2>
-    <p>Responde en nuestro WhatsApp y te recomendaremos el café ideal para ti.</p>
-    <a href="https://wa.me/593990888888" target="_blank" class="button">💬 Comprar Café</a>
+  <section class="step">
+    <h2>Tostado Medio</h2>
+    <p>Seleccionamos los mejores granos para garantizar un sabor balanceado y dulce.</p>
+    <button id="rain-sound-button" class="button">🌧️ Escuchar el Sonido del Tostado Medio</button>
+  </section>
+  <section class="step">
+    <h2>Tostado Alto</h2>
+    <p>Escogemos granos robustos para lograr un perfil intenso y desarrollar notas ahumadas y de chocolate amargo.</p>
+    <button id="fire-sound-button" class="button">🔥 Escuchar el Sonido del Tostado Alto</button>
+  </section>
+
+  <section class="step">
+    <h2>¿Por qué Café Antonio es Multisensorial?</h2>
+    <p>Café Antonio no es solo una bebida, es una experiencia que despierta tus sentidos. Desde el primer momento, el <strong>aroma</strong> del café recién molido te envuelve, transportándote a nuestra finca en Chaltura. Cada sorbo revela <strong>sabores profundos</strong>, ya sea el perfil robusto del tostado alto o la dulzura equilibrada del tostado medio.</p>
+    <p>Pero lo que realmente lo hace multisensorial es cómo combina <strong>sonido y sensación</strong>. Escucha el crujir del fuego y el suave murmullo de la lluvia, grabados directamente en el corazón de nuestra finca. Es una conexión directa con la naturaleza, un viaje a través del tiempo y el espacio en cada taza.</p>
+  </section>
+
+  <section class="step">
+    <h2>Contacto para Ventas</h2>
+    <p>¿Interesado en adquirir Café Antonio? Escríbenos directamente a nuestro WhatsApp para más información y pedidos.</p>
+    <a href="https://wa.me/593990888888" target="_blank" class="button">💬 Contactar por WhatsApp</a>
   </section>
 
   <footer>
@@ -114,8 +102,8 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const fireSound = document.getElementById('fire-sound');
-      const rainSound = document.getElementById('rain-sound');
+      const fireSound = new Audio('https://www.soundjay.com/nature/sounds/fire-2.mp3');
+      const rainSound = new Audio('https://www.soundjay.com/nature/sounds/rain-01.mp3');
       const fireButton = document.getElementById('fire-sound-button');
       const rainButton = document.getElementById('rain-sound-button');
 
@@ -123,12 +111,12 @@
         if (!fireSound.paused) {
           fireSound.pause();
           fireSound.currentTime = 0;
-          fireButton.textContent = '🔥 Tostado Alto';
+          fireButton.textContent = '🔥 Escuchar el Sonido del Tostado Alto';
         } else {
           rainSound.pause();
           rainSound.currentTime = 0;
           fireSound.play();
-          fireButton.textContent = '🔇 Detener Tostado Alto';
+          fireButton.textContent = '🔇 Detener Sonido';
         }
       });
 
@@ -136,12 +124,12 @@
         if (!rainSound.paused) {
           rainSound.pause();
           rainSound.currentTime = 0;
-          rainButton.textContent = '🌧️ Tostado Medio';
+          rainButton.textContent = '🌧️ Escuchar el Sonido del Tostado Medio';
         } else {
           fireSound.pause();
           fireSound.currentTime = 0;
           rainSound.play();
-          rainButton.textContent = '🔇 Detener Tostado Medio';
+          rainButton.textContent = '🔇 Detener Sonido';
         }
       });
     });
